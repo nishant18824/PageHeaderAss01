@@ -1,29 +1,40 @@
-import React from "react";
+
 import  ReactDOM  from "react-dom/client";
 
-const header1 = React.createElement(
-    "h1",
-    {id:"i1"},
-    "Hello"
-)
+// how to functional component mad?
+// first of all what is functional component is?
+// it is a normal function in javascript
 
-const header2 = React.createElement(
-    "h2",
-    {id:"i2"},
-    "Hello 2"
-)
+// normal function
+// const Title = function() {
+//     return <h1>Header</h1>
+// }
 
-const header3 = React.createElement(
-    "h3",
-    {id:"i3"},
-    "Hello 3"
-)
+const Subjective = function() {
+    return <div>navbar</div>
+} 
 
-const header = React.createElement(
-    "div",
-    {className: "title"},
-    [header1, header2 ,header3],
-);
+// arrow function
+const Title = (a, b) => 
+    (
+        <div>
+            <Subjective/>
+            <h1>Header</h1>
+        </div>
+   ) 
+
+
+
+const header = (
+
+    <div className="title">
+        {/* <Title()/> */
+        Title(4, 5)
+        }
+        <h2>Heading 2</h2>        
+        <h3>Heading 3</h3>
+    </div>
+    )
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
